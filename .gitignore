@@ -1,0 +1,21 @@
+# Neutral exchange and print exports (case insensitive)
+*.[sS][tT][eE][pP]
+*.[sS][tT][pP]
+*.[sS][tT][lL]
+
+# SolidWorks lock, backup and recovery files
+~$*
+*.sldbak
+*.SLDBAK
+*.swbak
+*.SWBAK
+*.bak
+*.tmp
+AutoRecover/
+Backup/
+Q8_整机恢复暂存.SLDASM
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
