@@ -1,6 +1,6 @@
 # Quadcopter Models
 
-四旋翼无人机的 SolidWorks 机械设计：早期 **9–10 寸平台**、**KESTREL Q8（红隼）**，以及当前的 **KESTREL Q5 Lite**。
+四旋翼无人机的 SolidWorks 机械设计：早期 **9–10 寸平台**、**KESTREL Q8（红隼）**，**KESTREL Q8 Lite**，以及 **SCALLOP Q5（扇贝）**。
 
 ## 9–10 寸平台 · 初代设计
 
@@ -29,9 +29,25 @@ KESTREL Q8 是面向电赛应用的 **8 寸三叶桨四旋翼平台**。以碳�
 
 主装配体：[Q8_8寸四旋翼.SLDASM](8寸-电赛/KESTREL_Q8/Q8_8寸四旋翼.SLDASM)
 
-## KESTREL Q5 Lite · 当前设计
+### KESTREL Q8 Lite · 轻量布局
 
-5 寸双叶柔性折叠桨四旋翼，采用镁合金 CNC 一体机身、倾斜机臂与条状下机舱，当前对角轴距约 **265.9 mm**。
+Q8 Lite 延用 Q8 的机臂、桨保、标准件及设备参考，保留完整款作为独立装配。相较 Q8，主要调整为：
+
+- **降低上层堆叠**：AGX Orin 移入下部吊舱，拆除原上层支架；电池与单个 MID360 改放上甲板，雷达靠前、向机头上方 45° 安装，电池靠后并横滚 90° 放置。
+- **重排吊舱**：100 mm 铝柱固定在甲板前后，飞控与电调叠放；保留原中央 X 主板，使用独立专用甲板及底板。
+- **精简相机与支脚**：移除两侧钢索相机，增加底部对地 USB 相机并保留机头 D435i；复用长侧板，通过连接座向外倾斜 15° 作为支脚。
+
+| 俯视图 | 左上方 45° 视图 |
+| :---: | :---: |
+| ![KESTREL Q8 Lite 俯视图](picture/kestrel-q8-lite-top.png) | ![KESTREL Q8 Lite 左上方45度视图](picture/kestrel-q8-lite-upper-left-45.png) |
+
+Lite 主装配体：[Q8L_KESTREL_Q8_Lite.SLDASM](8寸-电赛/KESTREL_Q8/Q8L_KESTREL_Q8_Lite.SLDASM)
+
+## SCALLOP Q5 · 扇贝
+
+**SCALLOP Q5** 是这款 5 寸平台的名称与型号；SCALLOP 意为“扇贝”，呼应四个护圈与相邻内凹弧形成的扇贝状轮廓。
+
+5 寸双叶柔性折叠桨四旋翼，采用镁合金 CNC 一体机身、倾斜机臂与条状下机舱，对角轴距约 **265.9 mm**。
 
 - **动力与护圈**：T-Motor F60 Pro V-LV 电机倒置安装；银灰色 PA12 四护圈通过内凹相切弧连接成一体，主壁 1.6 mm，护圈与机舱保留约 1.0–1.8 mm 间隙。桨保按暂定材料密度估重约 72 g。
 - **机身与机舱**：机臂末端下沉 10 mm，六边形电机台；根部设置 R12 加强过渡与 C1 倒角。机舱前端敞开，侧壁采用 45° 平行短通风槽，底部为带防滑槽的橡胶垫。
@@ -40,7 +56,7 @@ KESTREL Q8 是面向电赛应用的 **8 寸三叶桨四旋翼平台**。以碳�
 
 | 俯视图 | 左上方 45° 视图 |
 | :---: | :---: |
-| ![KESTREL Q5 Lite 俯视图](picture/kestrel-q5-top.png) | ![KESTREL Q5 Lite 左上方45度视图](picture/kestrel-q5-upper-left-45.png) |
+| ![SCALLOP Q5 俯视图](picture/kestrel-q5-top.png) | ![SCALLOP Q5 左上方45度视图](picture/kestrel-q5-upper-left-45.png) |
 
 主装配体：[Q5_KESTREL_Q5_Lite.SLDASM](5寸/KESTREL_Q5_Lite/Q5_KESTREL_Q5_Lite.SLDASM)
 
@@ -55,12 +71,13 @@ quadcopter_model/
 │   ├── AGENTS.md              # Q8 核心设计规则
 │   └── KESTREL_Q8/
 │       ├── Q8_8寸四旋翼.SLDASM
+│       ├── Q8L_KESTREL_Q8_Lite.SLDASM
 │       ├── 零件/
 │       ├── 组件/
 │       ├── 参考模型/          # 当前整机使用的设备工作副本
 │       ├── 材料/
 │       └── 制造与交换/
-├── 5寸/KESTREL_Q5_Lite/       # Q5 主装配体、零件及材料
+├── 5寸/KESTREL_Q5_Lite/       # SCALLOP Q5 主装配体、零件及材料
 ├── MID360/                    # 设备参考模型
 ├── NVIDIA Jetson AGX Orion/
 ├── Pixhawk_4/
